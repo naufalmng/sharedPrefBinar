@@ -29,12 +29,6 @@ class LoginActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityLoginBinding
     lateinit var sharedPreferencesHelper: SharedPreferencesHelper
-//    private val sharedPreferences: SharedPreferences by lazy{
-//        getSharedPreferences("simple_value", Context.MODE_PRIVATE)
-//    }
-//    private val preferencesEditor: SharedPreferences.Editor by lazy{
-//        sharedPreferences.edit()
-//    }
 
     override fun onStart() {
         super.onStart()
@@ -42,10 +36,6 @@ class LoginActivity : AppCompatActivity() {
             startActivity(Intent(this, MainActivity::class.java))
             finish()
         }
-//        if(sharedPreferencesHelper.getBoolean(Constant.PREF_IS_LOGOUT)){
-//            startActivity(Intent(this, MainActivity::class.java))
-//            finish()
-//        }
     }
 
 
@@ -56,12 +46,6 @@ class LoginActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
         sharedPreferencesHelper = SharedPreferencesHelper(this)
-
-        val usernameValue = binding.username.text.toString()
-        val passwordValue = binding.password.text.toString()
-//        preferencesEditor.putString("username",usernameValue)
-//        preferencesEditor.putString("password",passwordValue)
-//        preferencesEditor.apply()
 
         binding.login.setOnClickListener {
             //save session
@@ -80,18 +64,4 @@ class LoginActivity : AppCompatActivity() {
         finishAffinity()
     }
 
-///**
-// * Extension function to simplify setting an afterTextChanged action to EditText components.
-// */
-//fun EditText.afterTextChanged(afterTextChanged: (String) -> Unit) {
-//    this.addTextChangedListener(object : TextWatcher {
-//        override fun afterTextChanged(editable: Editable?) {
-//            afterTextChanged.invoke(editable.toString())
-//        }
-//
-//        override fun beforeTextChanged(s: CharSequence, start: Int, count: Int, after: Int) {}
-//
-//        override fun onTextChanged(s: CharSequence, start: Int, before: Int, count: Int) {}
-//    })
-//    }
 }

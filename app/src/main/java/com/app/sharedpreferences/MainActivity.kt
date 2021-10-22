@@ -60,19 +60,3 @@ class MainActivity : AppCompatActivity() {
         exitProcess(0)
     }
 }
-//private var _binding: ? = null
-//private val binding get() = _binding!!
-//
-//override fun onCreateView(
-//    inflater: LayoutInflater,
-//    container: ViewGroup?,
-//    savedInstanceState: Bundle?
-//): View {
-//    _binding = .inflate(inflater, container, false)
-//    return binding.root
-//}
-//
-//override fun onDestroyView() {
-//    super.onDestroyView()
-//    _binding = null
-//}
