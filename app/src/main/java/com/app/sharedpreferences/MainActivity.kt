@@ -16,16 +16,7 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
     lateinit var sharedPreferences: SharedPreferencesHelper
-//    private val preferencesEditor: SharedPreferencesHelper.Editor by lazy{
-//        sharedPreferences.edit()
-//    }
-//override fun onStart() {
-//    super.onStart()
-//    if(sharedPreferences.getBoolean(Constant.PREF_IS_LOGIN)){
-//        startActivity(Intent(this, MainActivity::class.java))
-//        finish()
-//    }
-//}
+
 
     @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
