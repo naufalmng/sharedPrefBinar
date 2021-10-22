@@ -16,16 +16,7 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
     lateinit var sharedPreferences: SharedPreferencesHelper
-//    private val preferencesEditor: SharedPreferencesHelper.Editor by lazy{
-//        sharedPreferences.edit()
-//    }
-//override fun onStart() {
-//    super.onStart()
-//    if(sharedPreferences.getBoolean(Constant.PREF_IS_LOGIN)){
-//        startActivity(Intent(this, MainActivity::class.java))
-//        finish()
-//    }
-//}
+
 
     @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -34,13 +25,8 @@ class MainActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
         sharedPreferences = SharedPreferencesHelper(this)
-//        val preferencesEditor = sharedPreferences.edit()
 
-//        binding.etValue.setOnClickListener {
-//            val textValue = binding.etValue.text.toString()
-//            preferencesEditor.putString("Value",textValue)
-//            preferencesEditor.apply()
-//        }
+
         val usernameResult = sharedPreferences.getString(Constant.PREF_USERNAME)
         val passwordResult = sharedPreferences.getString(Constant.PREF_PASSWORD)
         binding.tvUsername.text = "USERNAME: $usernameResult"
@@ -60,19 +46,3 @@ class MainActivity : AppCompatActivity() {
         exitProcess(0)
     }
 }
-//private var _binding: ? = null
-//private val binding get() = _binding!!
-//
-//override fun onCreateView(
-//    inflater: LayoutInflater,
-//    container: ViewGroup?,
-//    savedInstanceState: Bundle?
-//): View {
-//    _binding = .inflate(inflater, container, false)
-//    return binding.root
-//}
-//
-//override fun onDestroyView() {
-//    super.onDestroyView()
-//    _binding = null
-//}
