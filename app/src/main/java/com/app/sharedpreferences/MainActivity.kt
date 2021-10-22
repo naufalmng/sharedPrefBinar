@@ -34,13 +34,8 @@ class MainActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
         sharedPreferences = SharedPreferencesHelper(this)
-//        val preferencesEditor = sharedPreferences.edit()
 
-//        binding.etValue.setOnClickListener {
-//            val textValue = binding.etValue.text.toString()
-//            preferencesEditor.putString("Value",textValue)
-//            preferencesEditor.apply()
-//        }
+
         val usernameResult = sharedPreferences.getString(Constant.PREF_USERNAME)
         val passwordResult = sharedPreferences.getString(Constant.PREF_PASSWORD)
         binding.tvUsername.text = "USERNAME: $usernameResult"
